@@ -11,8 +11,7 @@ function Dashboard() {
     ];
 
     return (
-        <div>
-            <h1>Welcome Traveller, to DrippsOS</h1>
+        <div style={{position: 'absolute', top: '0', left: '0'}}>
             <TimeSeriesChart data={timeSeriesData}/>
         </div>
     );
