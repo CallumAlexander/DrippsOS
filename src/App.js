@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Dashboard from "./Dashboard";
 import {useState} from "react";
+import Footer from "./Footer";
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
       <div className="Dashboard-dv">
         <Dashboard/>
       </div>
-
+      <Footer/>
     </div>
   );
 }
