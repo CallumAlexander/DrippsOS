@@ -23,7 +23,9 @@ function TimeSeriesChart({data}) {
                     {
                         label: 'Time Series Data',
                         data: data.map((item) => item.value),
-                        borderColor: 'blue',
+                        borderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary'),
+                        pointBackgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary'),
+                        pointBorderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary'),
                     },
                 ],
             },

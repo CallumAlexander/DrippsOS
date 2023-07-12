@@ -1,6 +1,14 @@
 /* Global Styles */
 @import "styles.css";
 
+/* OneDark Colour Scheme */
+:root {
+  --color-primary: #61afef;    /* Blue */
+  --color-secondary: #98c379;  /* Green */
+  --color-background: #282c34; /* Dark gray */
+  --color-text: #abb2bf;       /* Light gray */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,6 +16,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 code {
