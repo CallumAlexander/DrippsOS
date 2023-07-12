@@ -30,10 +30,10 @@ function App() {
   return (
     <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
         <button className="toggle-button" onClick={handleToggleMode}>
-        Toggle Mode
-      </button>
+          Toggle Colour Scheme
+        </button>
       <div className="Dashboard-dv">
-        <Dashboard />
+        <Dashboard/>
       </div>
 
     </div>
