@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Dashboard from "./Dashboard";
-import {useState} from "react";
+import React, {useState} from "react";
 import Footer from "./Footer";
 
 function App() {
@@ -28,16 +28,61 @@ function App() {
     }
   };
 
+  const [activeTab, setActiveTab] = useState('weather');
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const weatherData = [
+    {label: 'Jan', value: 10},
+    {label: 'Feb', value: 20},
+    {label: 'Mar', value: 15},
+  ];
+
+  const powerData = [
+    {label: 'Jan', value: 50},
+    {label: 'Feb', value: 60},
+    {label: 'Mar', value: 45},
+  ];
+
   return (
-    <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
+      <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
+
+        <h1>Welcome Traveller, to DrippsOS</h1>
+
         <button className="toggle-button" onClick={handleToggleMode}>
           Toggle Colour Scheme
         </button>
-      <div className="Dashboard-dv">
-        <Dashboard/>
+
+
+        <div className="tab-container">
+          <button
+              className={`tab ${activeTab === 'weather' ? 'active' : ''}`}
+              onClick={() => handleTabChange('weather')}
+          >
+            Weather Station
+          </button>
+          <button
+              className={`tab ${activeTab === 'power' ? 'active' : ''}`}
+              onClick={() => handleTabChange('power')}
+          >
+            ReNES
+          </button>
+        </div>
+
+
+        <div className="dashboard-container">
+          {/* Weather Station Dashboard */}
+          {activeTab === 'weather' && <Dashboard data={weatherData}/>}
+
+          {/* Power Station Dashboard */}
+          {activeTab === 'power' && <Dashboard data={powerData}/>}
+        </div>
+
+
+        <Footer/>
       </div>
-      <Footer/>
-    </div>
   );
 }
 

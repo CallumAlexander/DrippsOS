@@ -2,36 +2,29 @@ import React from 'react';
 import TimeSeriesChart from './TimeSeriesChart'
 
 
-function Dashboard() {
-
-    const timeSeriesData = [
-        {label: 'Jan', value: 10},
-        {label: 'Feb', value: 20},
-        {label: 'Mar', value: 15},
-    ];
+function Dashboard({data}) {
 
     return (
         <div>
-            <h1>Welcome Traveller, to DrippsOS</h1>
             <div className="center-container">
                 <div className="grid-container">
-                  <div className="chart">
-                    <TimeSeriesChart data={timeSeriesData} />
+                    <div className="chart">
+                        <TimeSeriesChart data={data}/>
+                    </div>
+                    <div className="chart">
+                        <TimeSeriesChart data={data}/>
                   </div>
                   <div className="chart">
-                    <TimeSeriesChart data={timeSeriesData} />
+                      <TimeSeriesChart data={data}/>
                   </div>
                   <div className="chart">
-                    <TimeSeriesChart data={timeSeriesData} />
+                      <TimeSeriesChart data={data}/>
                   </div>
                   <div className="chart">
-                    <TimeSeriesChart data={timeSeriesData} />
+                      <TimeSeriesChart data={data}/>
                   </div>
                   <div className="chart">
-                    <TimeSeriesChart data={timeSeriesData} />
-                  </div>
-                  <div className="chart">
-                    <TimeSeriesChart data={timeSeriesData} />
+                      <TimeSeriesChart data={data}/>
                   </div>
                 </div>
             </div>
