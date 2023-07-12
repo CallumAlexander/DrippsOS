@@ -11,27 +11,31 @@ function Dashboard() {
     ];
 
     return (
-        <div className="grid-container">
-      <h1>Welcome Traveller, to DrippsOS</h1>
-      <div className="chart">
-        <TimeSeriesChart data={timeSeriesData} />
-      </div>
-      <div className="chart">
-        <TimeSeriesChart data={timeSeriesData} />
-      </div>
-      <div className="chart">
-        <TimeSeriesChart data={timeSeriesData} />
-      </div>
-      <div className="chart">
-        <TimeSeriesChart data={timeSeriesData} />
-      </div>
-      <div className="chart">
-        <TimeSeriesChart data={timeSeriesData} />
-      </div>
-      <div className="chart">
-        <TimeSeriesChart data={timeSeriesData} />
-      </div>
-    </div>
+        <div>
+            <h1>Welcome Traveller, to DrippsOS</h1>
+            <div className="center-container">
+                <div className="grid-container">
+                  <div className="chart">
+                    <TimeSeriesChart data={timeSeriesData} />
+                  </div>
+                  <div className="chart">
+                    <TimeSeriesChart data={timeSeriesData} />
+                  </div>
+                  <div className="chart">
+                    <TimeSeriesChart data={timeSeriesData} />
+                  </div>
+                  <div className="chart">
+                    <TimeSeriesChart data={timeSeriesData} />
+                  </div>
+                  <div className="chart">
+                    <TimeSeriesChart data={timeSeriesData} />
+                  </div>
+                  <div className="chart">
+                    <TimeSeriesChart data={timeSeriesData} />
+                  </div>
+                </div>
+            </div>
+        </div>
     );
 
 }
