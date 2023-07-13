@@ -6,6 +6,7 @@ import Footer from "./Footer";
 
 function App() {
 
+  /* Updating the Colour Scheme functionality */
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleToggleMode = () => {
