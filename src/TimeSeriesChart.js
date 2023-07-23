@@ -29,6 +29,19 @@ function TimeSeriesChart({data}) {
                     },
                 ],
             },
+            options: {
+                plugins: {
+                    subtitle: {
+                        display: true,
+                        text: "Subtitle"
+                    },
+                    title: {
+                        display: true,
+                        text: "Chart title"
+                    }
+
+                }
+            }
         });
 
         // Store the chart instance on the canvas element
