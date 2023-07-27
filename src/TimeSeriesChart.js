@@ -2,7 +2,7 @@
 import React from "react";
 import {Chart} from "chart.js/auto";
 
-function TimeSeriesChart({data}) {
+function TimeSeriesChart({data, title_, subtitle_}) {
     const chartRef = React.useRef(null);
 
     React.useEffect(() => {
@@ -33,11 +33,11 @@ function TimeSeriesChart({data}) {
                 plugins: {
                     subtitle: {
                         display: true,
-                        text: "Subtitle"
+                        text: subtitle_ || "Subtitle"
                     },
                     title: {
                         display: true,
-                        text: "Chart title"
+                        text: title_ || "Chart title"
                     }
 
                 }
