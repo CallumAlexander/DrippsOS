@@ -35,16 +35,35 @@ function App() {
     setActiveTab(tab);
   };
 
-  const weatherData = [
+  const weatherDataPoints = [
     {label: 'Jan', value: 10},
     {label: 'Feb', value: 20},
     {label: 'Mar', value: 15},
   ];
 
-  const powerData = [
+  const powerDataPoints = [
     {label: 'Jan', value: 50},
     {label: 'Feb', value: 60},
     {label: 'Mar', value: 45},
+  ];
+
+  const weatherData = [
+    { data: weatherDataPoints, title: "Energy generated", subtitle: "In Kwh" },
+    { data: weatherDataPoints, title: "Main Sluice Height", subtitle: "Metres" },
+    { data: weatherDataPoints, title: "Wheel Sluice Height", subtitle: "Metres" },
+    { data: weatherDataPoints, title: "Water throughput", subtitle: "Gallons per second in the trough" },
+    { data: weatherDataPoints, title: "Wheel RPM" },
+    { data: weatherDataPoints, title: "Valve height", subtitle: "Metres" },
+  ];
+
+
+  const powerData = [
+    { data: powerDataPoints, title: "Energy generated", subtitle: "In Kwh" },
+    { data: powerDataPoints, title: "Main Sluice Height", subtitle: "Metres" },
+    { data: powerDataPoints, title: "Wheel Sluice Height", subtitle: "Metres" },
+    { data: powerDataPoints, title: "Water throughput", subtitle: "Gallons per second in the trough" },
+    { data: powerDataPoints, title: "Wheel RPM" },
+    { data: powerDataPoints, title: "Valve height", subtitle: "Metres" },
   ];
 
   return (
@@ -75,10 +94,10 @@ function App() {
 
         <div className="dashboard-container">
           {/* Weather Station Dashboard */}
-          {activeTab === 'weather' && <Dashboard data={weatherData}/>}
+          {activeTab === 'weather' && <Dashboard chartsData={weatherData}/>}
 
           {/* Power Station Dashboard */}
-          {activeTab === 'power' && <Dashboard data={powerData}/>}
+          {activeTab === 'power' && <Dashboard chartsData={powerData}/>}
         </div>
 
 
